@@ -1,173 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GooberNet</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<title>GooberNet 🪿</title>
 
-        body{
-            background:#121212;
-            color:white;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        header{
-            background:#1f1f1f;
-            padding:20px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border-bottom:2px solid #2d2d2d;
-        }
+body{
+    background:#101010;
+    color:white;
+}
 
-        h1{
-            color:#4ea3ff;
-        }
+header{
+    background:#1b1b1b;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid #333;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            transition:.2s;
-        }
+.logo{
+    color:#4ea3ff;
+}
 
-        nav a:hover{
-            color:#4ea3ff;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
 
-        .hero{
-            text-align:center;
-            padding:100px 20px;
-        }
+nav a:hover{
+    color:#4ea3ff;
+}
 
-        .hero h2{
-            font-size:48px;
-            margin-bottom:15px;
-        }
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
 
-        .hero p{
-            font-size:20px;
-            color:#cfcfcf;
-            margin-bottom:30px;
-        }
+.hero h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
 
-        button{
-            background:#4ea3ff;
-            color:white;
-            border:none;
-            padding:15px 35px;
-            font-size:18px;
-            border-radius:10px;
-            cursor:pointer;
-            transition:.2s;
-        }
+.hero p{
+    color:#ccc;
+    font-size:20px;
+    margin-bottom:30px;
+}
 
-        button:hover{
-            transform:scale(1.05);
-        }
+button{
+    background:#4ea3ff;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
 
-        .posts{
-            max-width:800px;
-            margin:auto;
-            padding:40px 20px;
-        }
+button:hover{
+    transform:scale(1.05);
+}
 
-        .post{
-            background:#1e1e1e;
-            padding:20px;
-            border-radius:12px;
-            margin-bottom:20px;
-        }
+.login{
+    max-width:400px;
+    margin:auto;
+    background:#1d1d1d;
+    padding:30px;
+    border-radius:15px;
+}
 
-        .username{
-            color:#4ea3ff;
-            font-weight:bold;
-        }
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:none;
+}
 
-        footer{
-            text-align:center;
-            padding:30px;
-            color:#999;
-            margin-top:40px;
-        }
-    </style>
+.posts{
+    max-width:850px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.post{
+    background:#1d1d1d;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.username{
+    color:#4ea3ff;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>🪿 GooberNet</h1>
+<h1 class="logo">🪿 GooberNet</h1>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Explore</a>
-        <a href="#">Profile</a>
-        <a href="#">Login</a>
-    </nav>
+<nav>
+<a href="#">Home</a>
+<a href="#">Explore</a>
+<a href="#">Profile</a>
+<a href="#">Login</a>
+</nav>
+
 </header>
 
 
 <section class="hero">
-    <h2>Welcome to GooberNet</h2>
-    <p>The internet's goofiest social network.</p>
 
-    <button onclick="goober()">Become a Goober</button>
+<h2>Welcome to GooberNet</h2>
+
+<p>The internet's goofiest social network.</p>
+
+<button onclick="goober()">
+Become a Goober
+</button>
+
 </section>
+
+
+<section class="login">
+
+<h2>Join GooberNet</h2>
+
+<br>
+
+<input id="email" placeholder="Email">
+
+<input id="password" type="password" placeholder="Password">
+
+<input id="username" placeholder="Username">
+
+<button onclick="signup()">
+Sign Up
+</button>
+
+</section>
+
 
 
 <section class="posts">
 
-    <div class="post">
-        <div class="username">@chatgpt</div>
-        <br>
-        <p>Welcome to GooberNet! 🎉</p>
-    </div>
+<div class="post">
+<div class="username">@chatgpt</div>
+<br>
+<p>Welcome to GooberNet! 🎉</p>
+</div>
 
-    <div class="post">
-        <div class="username">@isaac</div>
-        <br>
-        <p>We're actually making a social media app 😭🙏</p>
-    </div>
+<div class="post">
+<div class="username">@isaac</div>
+<br>
+<p>We're actually making a social media app 😭🙏</p>
+</div>
 
 </section>
 
 
 <footer>
-    © 2026 GooberNet • Certified Goobers Only 🪿
+© 2026 GooberNet • Certified Goobers Only 🪿
 </footer>
 
 
-<script>
-function goober(){
-    alert("Welcome, certified goober. 😭🙏");
-}
-</script>
 
-
-<!-- SUPABASE CONNECTION -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
 
-const supabaseUrl = "https://lamnpsupqyhvhebkyrsy.supabase.co";
+const supabaseUrl =
+"https://lamnpsupqyhvhebkyrsy.supabase.co";
 
-const supabaseKey = "sb_publishable_xKNmab4ME2quujm3rQcRcg_3NeKLJEp";
+
+const supabaseKey =
+"sb_publishable_xKNmab4ME2quujm3rQcRcg_3NeKLJEp";
 
 
-const supabase = window.supabase.createClient(
-    supabaseUrl,
-    supabaseKey
+const supabase =
+window.supabase.createClient(
+supabaseUrl,
+supabaseKey
 );
 
 
 console.log("Supabase connected!");
+
+
+
+function goober(){
+
+alert("Welcome, certified goober 😭🙏");
+
+}
+
+
+
+async function signup(){
+
+const email =
+document.getElementById("email").value;
+
+const password =
+document.getElementById("password").value;
+
+const username =
+document.getElementById("username").value;
+
+
+const {data,error} =
+await supabase.auth.signUp({
+
+email,
+password
+
+});
+
+
+if(error){
+
+alert(error.message);
+return;
+
+}
+
+
+await supabase
+.from("profiles")
+.insert({
+
+id:data.user.id,
+username:username
+
+});
+
+
+alert("Welcome to GooberNet 🪿🔥");
+
+}
 
 </script>
 
