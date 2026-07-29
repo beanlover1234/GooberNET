@@ -113,12 +113,14 @@
     </nav>
 </header>
 
+
 <section class="hero">
     <h2>Welcome to GooberNet</h2>
     <p>The internet's goofiest social network.</p>
 
     <button onclick="goober()">Become a Goober</button>
 </section>
+
 
 <section class="posts">
 
@@ -136,15 +138,39 @@
 
 </section>
 
+
 <footer>
     © 2026 GooberNet • Certified Goobers Only 🪿
 </footer>
+
 
 <script>
 function goober(){
     alert("Welcome, certified goober. 😭🙏");
 }
 </script>
+
+
+<!-- SUPABASE CONNECTION -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const supabaseUrl = "https://lamnpsupqyhvhebkyrsy.supabase.co";
+
+const supabaseKey = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+
+
+const supabase = window.supabase.createClient(
+    supabaseUrl,
+    supabaseKey
+);
+
+
+console.log("Supabase connected!");
+
+</script>
+
 
 </body>
 </html>
