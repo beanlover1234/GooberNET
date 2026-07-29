@@ -10,124 +10,108 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background:#101010;
-    color:white;
-}
-
-
-header{
-    background:#1c1c1c;
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:2px solid #333;
+body {
+    margin: 0;
+    background: #111;
+    color: white;
 }
 
 
-.logo{
-    color:#4ea3ff;
-    font-size:30px;
+/* HEADER */
+
+header {
+    background: #1d1d1d;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #4ea3ff;
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
 }
 
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 20px;
 }
 
 
-nav a:hover{
-    color:#4ea3ff;
+button {
+    background: #4ea3ff;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 
+/* SIGNUP */
 
-.hero{
-    text-align:center;
-    padding:100px 20px;
-}
+.box {
 
-
-.hero h1{
-    font-size:55px;
-}
-
-
-.hero p{
-    margin:20px;
-    color:#ccc;
-    font-size:20px;
-}
-
-
-
-button{
-
-    background:#4ea3ff;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:12px;
-    cursor:pointer;
-    font-size:18px;
-
-}
-
-
-button:hover{
-
-    transform:scale(1.05);
+    width: 350px;
+    max-width: 90%;
+    background: #1d1d1d;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
 
 }
 
 
+input {
 
-.signup{
-
-    max-width:400px;
-    margin:auto;
-    background:#1c1c1c;
-    padding:30px;
-    border-radius:15px;
-
-}
-
-
-input{
-
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:8px;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
 
 }
 
 
 
-.posts{
+/* POSTS */
 
-    max-width:800px;
-    margin:auto;
-    padding:40px 20px;
+.posts {
+
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
 
 }
 
 
+.post {
 
-.post{
-
-    background:#1c1c1c;
+    background:#1d1d1d;
     padding:20px;
     border-radius:15px;
     margin-bottom:20px;
@@ -135,8 +119,7 @@ input{
 }
 
 
-
-.username{
+.username {
 
     color:#4ea3ff;
     font-weight:bold;
@@ -144,8 +127,7 @@ input{
 }
 
 
-
-footer{
+footer {
 
     text-align:center;
     padding:40px;
@@ -157,7 +139,6 @@ footer{
 </style>
 
 </head>
-
 
 
 <body>
@@ -179,7 +160,9 @@ footer{
 
 </nav>
 
+
 </header>
+
 
 
 
@@ -194,20 +177,13 @@ Welcome to GooberNet
 The internet's goofiest social network 😭🙏
 </p>
 
-
-<button onclick="goober()">
-Become a Goober
-</button>
-
-
 </section>
 
 
 
 
 
-
-<section class="signup">
+<div class="box">
 
 <h2>
 Create Account
@@ -218,7 +194,13 @@ Create Account
 
 <input id="email" placeholder="Email">
 
-<input id="password" type="password" placeholder="Password">
+
+<input id="password"
+type="password"
+placeholder="Password">
+
+
+<br><br>
 
 
 <button onclick="signup()">
@@ -226,7 +208,7 @@ Sign Up
 </button>
 
 
-</section>
+</div>
 
 
 
@@ -243,10 +225,8 @@ Sign Up
 @chatgpt
 </div>
 
-<br>
-
 <p>
-Welcome to GooberNet 🎉🪿
+Welcome to GooberNet 🎉
 </p>
 
 </div>
@@ -259,10 +239,8 @@ Welcome to GooberNet 🎉🪿
 @isaac
 </div>
 
-<br>
-
 <p>
-We're actually making a social media app 😭🙏
+We're building a social media app 😭🙏
 </p>
 
 </div>
@@ -277,7 +255,7 @@ We're actually making a social media app 😭🙏
 
 <footer>
 
-© 2026 GooberNet • Certified Goobers Only 🪿
+© 2026 GooberNet 🪿
 
 </footer>
 
@@ -287,7 +265,7 @@ We're actually making a social media app 😭🙏
 
 
 
-<!-- SUPABASE -->
+<!-- ONLY SUPABASE CODE -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -295,36 +273,23 @@ We're actually making a social media app 😭🙏
 <script>
 
 
-const supabaseUrl =
+const url =
 "https://lamnpsupqyhvhebkyrsy.supabase.co";
 
 
-const supabaseKey =
+const key =
 "sb_publishable_xKNmab4ME2quujm3rQcRcg_3NeKLJEp";
 
 
 const client =
 window.supabase.createClient(
-    supabaseUrl,
-    supabaseKey
+    url,
+    key
 );
 
 
 
-console.log("Supabase connected!");
-
-
-
-
-
-function goober(){
-
-alert(
-"Welcome, certified goober 😭🙏"
-);
-
-}
-
+console.log("GooberNet connected to Supabase");
 
 
 
@@ -333,33 +298,33 @@ alert(
 async function signup(){
 
 
-const username =
+let username =
 document.getElementById("username").value;
 
 
-const email =
+let email =
 document.getElementById("email").value;
 
 
-const password =
+let password =
 document.getElementById("password").value;
 
 
 
-const {data,error} =
+const result =
 await client.auth.signUp({
 
-email:email,
+email: email,
 
-password:password
+password: password
 
 });
 
 
 
-if(error){
+if(result.error){
 
-alert(error.message);
+alert(result.error.message);
 
 return;
 
@@ -367,21 +332,20 @@ return;
 
 
 
-
 await client
 .from("profiles")
 .insert({
 
-id:data.user.id,
+id: result.data.user.id,
 
-username:username
+username: username
 
 });
 
 
 
 alert(
-"Account created! Welcome to GooberNet 🪿🔥"
+"Welcome to GooberNet 🪿🔥"
 );
 
 
@@ -391,7 +355,6 @@ alert(
 
 
 </script>
-
 
 
 </body>
